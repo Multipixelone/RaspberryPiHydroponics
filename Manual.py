@@ -12,6 +12,7 @@ while True:
         query = ""
     if query == "exit":
         break
+        query == ""
     else:
         print "Unrecognized statement"
         query = ""
