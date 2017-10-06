@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # Made by Multipixelone
+# Manual Control
 print "Welcome to RaspberryPiHydroponics"
 print "For help, type help"
 

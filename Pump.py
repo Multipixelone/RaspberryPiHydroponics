@@ -1,12 +1,14 @@
 #!/usr/bin/env python
 # Made by Multipixelone
 # Pump Controller
-import RPi.GIPO
-def valve_OnOff(Pin):
+import RPi.GIPO  # Import GPIO Control
+from time import sleep  # Import Sleep Control
+
+def valve_cycle():
     while True:
         GPIO.output(18, GPIO.HIGH)
-        print("GPIO HIGH (on), valve should be off")
-        time.sleep(10)  # Waiting time in seconds
-        GPIO.output(18, GPIO.LOW)
-        print("GPIO LOW (off), valve should be on"
+        print("Valve On")
         time.sleep(10)
+        GPIO.output(18, GPIO.LOW)
+        print("Valve is off")
+        time.sleep(1)
