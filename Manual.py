@@ -1,7 +1,5 @@
 #!/usr/bin/env python
-# Test Selector
-# By Multipixelone
-
+# Made by Multipixelone
 print "Welcome to RaspberryPiHydroponics"
 print "For help, type help"
 
