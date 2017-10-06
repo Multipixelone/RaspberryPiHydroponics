@@ -11,7 +11,8 @@ if [[ ! $REPLY =~ ^[Nn]$ ]]
 then
     apt-get update
     apt-get --yes upgrade
-    sudo apt-get install --yes rpi.gpio
+    apt-get install --yes rpi.gpio python python-pip vim
+    pip install schedule
     reboot
 else
     echo Install Cancelled... Exiting
