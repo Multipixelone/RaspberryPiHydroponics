@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # Made by Multipixelone
 # Manual Control
+from PumpControl import Cycle
 print "Welcome to RaspberryPiHydroponics by Multipixelone"
 print "For help, type help"
 
@@ -11,6 +12,9 @@ while True:
         query = ""
     if query == "exit" or query == "quit":
         break
+        query == ""
+    if query == "auto":
+        Cycle()
         query == ""
     else:
         print "Unrecognized statement"
