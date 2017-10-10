@@ -1,7 +1,7 @@
 #!/bin/bash
 # Made by Multipixelone
 if [ "$EUID" -ne 0 ]
-  then echo "Sorry, I need root access . Please run as root or with sudo ;)"
+  then echo "Sorry, I need root access. Please run as root or with sudo ;)"
   exit
 fi
 
