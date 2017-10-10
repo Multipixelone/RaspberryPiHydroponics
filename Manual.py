@@ -9,7 +9,7 @@ while True:
     if query == "help":
         print "HELP IS HERE"
         query = ""
-    if query == "exit":
+    if query == "exit" or query == "quit":
         break
         query == ""
     else:
