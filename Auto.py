@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # Made by Multipixelone
 # Automatic Plant Control, With Defaults set from the Install script!
-from PumpControl import Cycle
+from Pump import Cycle
 import schedule
 
 # Schedule
