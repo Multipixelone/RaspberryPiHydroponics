@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # Made by Multipixelone
 # Manual Control
-print "Welcome to RaspberryPiHydroponics"
+print "Welcome to RaspberryPiHydroponics by Multipixelone"
 print "For help, type help"
 
 while True:
