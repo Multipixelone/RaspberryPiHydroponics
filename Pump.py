@@ -2,13 +2,18 @@
 # Made by Multipixelone
 # Pump Controller
 import RPi.GPIO as GPIO
-from time import sleep  # Import Sleep Control
+#import schedule
+from time import sleep
 
-def valveCycle():
+def valveOn():
     while True:
         GPIO.output(18, GPIO.HIGH)
         print("Valve On")
-        sleep(10)
+def valveOff():
+    while True:
         GPIO.output(18, GPIO.LOW)
-        print("Valve is off")
-        sleep(1)
+        print("Valve Off")
+def Cycle():
+    valveOn()
+    sleep(5)  # Some Check of Water...?
+    valveOff()
