@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # Made by Multipixelone
 # Manual Control
-from PumpControl import Cycle
+from Pump import Cycle
 print "Welcome to RaspberryPiHydroponics by Multipixelone"
 print "For help, type help"
 
