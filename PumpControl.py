@@ -6,14 +6,13 @@ import RPi.GPIO as GPIO
 from time import sleep
 
 def valveOn():
-    while True:
-        GPIO.output(18, GPIO.HIGH)
-        print("Valve On")
+    GPIO.output(18, GPIO.HIGH)
+    print("Valve On")
 def valveOff():
-    while True:
-        GPIO.output(18, GPIO.LOW)
-        print("Valve Off")
+    GPIO.output(18, GPIO.LOW)
+    print("Valve Off")
 def Cycle():
-    valveOn()
-    sleep(5)  # Some Check of Water...?
-    valveOff()
+    while True:
+        valveOn()
+        sleep(5)  # Some Check of Water...?
+        valveOff()
