@@ -3,16 +3,9 @@
 # Pump Controller
 import RPi.GPIO as GPIO
 # import schedule
-from time import sleep
+# from time import sleep
 
-def valveOn():
+def Flood():
     GPIO.output(18, GPIO.HIGH)
-    print("Valve On")
-def valveOff():
+    #  Check for water level?
     GPIO.output(18, GPIO.LOW)
-    print("Valve Off")
-def Cycle():
-    while True:
-        valveOn()
-        sleep(5)  # Some Check of Water...?
-        valveOff()
