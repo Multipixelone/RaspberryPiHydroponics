@@ -11,8 +11,7 @@ def PumpOn():
 def PumpOff():
     GPIO.output(18, GPIO.LOW)
     print("Pump Off")
-def Cycle():
-    while True:
-        PumpOn()
-        sleep(5)  # Some Check of Water...?
-        PumpOff()
+def Flood():
+    PumpOn()
+    sleep(5)  # Some Check of Water...?
+    PumpOff()
