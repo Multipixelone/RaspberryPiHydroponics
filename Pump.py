@@ -3,7 +3,7 @@
 # Pump Controller
 import RPi.GPIO as GPIO
 # import schedule
-# from time import sleep
+from time import sleep
 
 def PumpOn():
     GPIO.output(18, GPIO.HIGH)
