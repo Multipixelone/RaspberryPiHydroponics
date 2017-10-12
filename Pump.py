@@ -5,14 +5,14 @@ import RPi.GPIO as GPIO
 # import schedule
 from time import sleep
 
-def valveOn():
+def PumpOn():
     GPIO.output(18, GPIO.HIGH)
-    print("Valve On")
-def valveOff():
+    print("Pump On")
+def PumpOff():
     GPIO.output(18, GPIO.LOW)
-    print("Valve Off")
+    print("Pump Off")
 def Cycle():
     while True:
-        valveOn()
+        PumpOn()
         sleep(5)  # Some Check of Water...?
-        valveOff()
+        PumpOff()
