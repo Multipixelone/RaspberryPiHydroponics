@@ -6,12 +6,12 @@ from time import sleep
 GPIO.setmode(GPIO.BCM)
 
 def PumpOn():
-    GPIO.output(18, GPIO.HIGH)
+    GPIO.output(3, GPIO.HIGH)
     print("Pump On")
 def PumpOff():
-    GPIO.output(18, GPIO.LOW)
+    GPIO.output(3, GPIO.LOW)
     print("Pump Off")
 def Flood():
     PumpOn()
-    sleep(5)  # Some Check of Water...?
+    sleep(4)  # Figure out how long to sleep for until the Tray is filled
     PumpOff()
