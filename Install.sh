@@ -1,5 +1,6 @@
 #!/bin/bash
 # Made by Multipixelone
+# Install Script
 if [ "$EUID" -ne 0 ]
   then echo "Sorry, I need root access. Please run as root or with sudo ;)"
   exit
