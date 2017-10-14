@@ -4,6 +4,7 @@
 import RPi.GPIO as GPIO
 # import schedule
 from time import sleep
+GPIO.setmode(GPIO.BCM)
 
 def PumpOn():
     GPIO.output(18, GPIO.HIGH)
