@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # Made by Multipixelone
-# Automatic Plant Control, With Defaults set from the Install script!
+# Automatic Ebb and Flow Hydroponics control
 from time import sleep
 import Pump
 import Lights
