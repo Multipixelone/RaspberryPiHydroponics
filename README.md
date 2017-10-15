@@ -1,2 +1,2 @@
 # RaspberryPiHydroponics
-🌿 An automated program to automate Hydroponics!
+🌿 A Python program to automate an Ebb and Flow Hydroponics system.
