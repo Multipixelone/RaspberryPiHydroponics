@@ -5,7 +5,7 @@ from time import sleep
 import Pump
 import Lights
 import schedule
-print("Welcome to RaspberryPiHydroponics, By Multipixelone!")
+print("Welcome to RaspberryPiHydroponics By Multipixelone.")
 print("Starting schedule...")
 
 # Schedule
