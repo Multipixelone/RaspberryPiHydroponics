@@ -15,6 +15,9 @@ read -r -p "Proceed with Install? [y/n]"
 echo
 if [[ ! $REPLY =~ ^[Nn]$ ]]
 then
+    cd ~/
+    git clone https://github.com/Multipixelone/RaspberryPiHydroponics/
+    cd RaspberryPiHydroponics
     apt-get update
     apt-get --yes upgrade
     apt-get install --yes rpi.gpio python python-pip
