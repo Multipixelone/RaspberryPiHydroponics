@@ -18,5 +18,5 @@ def PumpOff():
 
 def Flood():
     PumpOn()
-    sleep(4)  # Stopwatch the tray, set the correct time ;)
+    sleep(4)  # Stopwatch the tray, set the correct time to flood ;)
     PumpOff()
