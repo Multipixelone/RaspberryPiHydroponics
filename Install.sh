@@ -6,11 +6,6 @@ if [ "$EUID" -ne 0 ]
   exit
 fi
 
-# Clone this repo
-cd ~/
-git clone https://github.com/Multipixelone/RaspberryPiHydroponics/
-cd RaspberryPiHydroponics
-
 read -r -p "Proceed with Install? [y/n]"
 echo
 if [[ ! $REPLY =~ ^[Nn]$ ]]
