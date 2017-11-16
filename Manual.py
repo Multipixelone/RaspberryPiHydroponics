@@ -4,6 +4,11 @@
 # Pretty badly coded, but I wanted a way to do it manualy
 import Pump
 import Lights
+import RPi.GPIO as GPIO
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(2, GPIO.OUT)
+GPIO.setup(3, GPIO.OUT)
+
 print "Welcome to RaspberryPiHydroponics by Multipixelone"
 print "For help, type help"
 
@@ -17,6 +22,7 @@ while True:
         print "Type flood to flood the grow tray"
         query = ""
     if query == "exit" or query == "quit":
+        GPIO.cleanup()
         break
         query == ""
     if query == "flood":
@@ -38,8 +44,4 @@ while True:
     if query == "pumpoff":
         print "Turning Pump Off..."
         Pump.PumpOff
-        query = ""
-    else:
-        print "Unrecognized Statement"
-        print "Type help for help"
         query = ""
