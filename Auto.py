@@ -2,9 +2,13 @@
 # Made by Multipixelone
 # Automatic Ebb and Flow Hydroponics control
 from time import sleep
+import RPi.GPIO as GPIO
 import Pump
 import Lights
 import schedule
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(2, GPIO.OUT)
+GPIO.setup(3, GPIO.OUT)
 print("Welcome to RaspberryPiHydroponics By Multipixelone.")
 print("Starting schedule...")
 

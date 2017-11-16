@@ -3,7 +3,7 @@
 # Manual Control, for when you need control
 # Pretty badly coded, but I wanted a way to do it manualy
 import Pump
-import Lights
+from Lights import LightsOff, LightsOn
 import RPi.GPIO as GPIO
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(2, GPIO.OUT)
@@ -31,11 +31,11 @@ while True:
         query == ""
     if query == "lightson":
         print "Turning Lights On..."
-        Lights.LightsOn
+        LightsOn
         query = ""
     if query == "lightsoff":
         print "Turning Lights Off..."
-        Lights.LightsOff
+        LightsOff
         query = ""
     if query == "pumpon":
         print "Turning Pump On..."
