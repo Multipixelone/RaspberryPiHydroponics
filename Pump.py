@@ -4,15 +4,16 @@
 import RPi.GPIO as GPIO
 from time import sleep
 GPIO.setmode(GPIO.BCM)
+GPIO.setup(3, GPIO.OUT)
 
 
 def PumpOn():
-    GPIO.output(3, GPIO.HIGH)
+    GPIO.output(3, 1)
     print("Pump On")
 
 
 def PumpOff():
-    GPIO.output(3, GPIO.LOW)
+    GPIO.output(3, 0)
     print("Pump Off")
 
 
