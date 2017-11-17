@@ -10,6 +10,7 @@ read -r -p "Proceed with Install? [y/n]"
 echo
 if [[ ! $REPLY =~ ^[Nn]$ ]]
 then
+    apt install git
     cd ~/
     git clone https://github.com/Multipixelone/RaspberryPiHydroponics/
     cd RaspberryPiHydroponics
