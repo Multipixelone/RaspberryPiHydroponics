@@ -6,8 +6,8 @@ import Pump
 from Lights import LightsOff, LightsOn
 import RPi.GPIO as GPIO
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(2, GPIO.OUT)
-GPIO.setup(3, GPIO.OUT)
+GPIO.setup(17, GPIO.OUT)
+GPIO.setup(22, GPIO.OUT)
 
 print "Welcome to RaspberryPiHydroponics by Multipixelone"
 print "For help, type help"
