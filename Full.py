@@ -5,6 +5,7 @@ from time import sleep
 import RPi.GPIO as GPIO
 import schedule
 import atexit
+import threading
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(17, GPIO.OUT)
 GPIO.setup(22, GPIO.OUT)
@@ -43,11 +44,16 @@ def Flood():
     PumpOff()
 
 
+def run_threaded(job_func):
+    job_thread = threading.Thread(target=job_func)
+    job_thread.start()
+
+
 atexit.register(OnExit)  # Added GPIO Cleanup to Script Exit
 # Schedule
-schedule.every().day.at("10:30").do(Flood)
-schedule.every().day.at("7:00").do(LightsOn)
-schedule.every().day.at("13:30").do(LightsOff)
+schedule.every().day.at("10:30").do(run_threaded, Flood)
+schedule.every().day.at("7:00").do(run_threaded, LightsOn)
+schedule.every().day.at("13:30").do(run_threaded, LightsOff)
 
 while True:
     schedule.run_pending()
