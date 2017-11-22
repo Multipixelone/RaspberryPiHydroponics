@@ -4,11 +4,16 @@
 from time import sleep
 import RPi.GPIO as GPIO
 import schedule
+import atexit
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(17, GPIO.OUT)
 GPIO.setup(22, GPIO.OUT)
 print("Welcome to RaspberryPiHydroponics By Multipixelone.")
 print("Starting schedule...")
+
+
+def OnExit():
+    GPIO.cleanup()
 
 
 def LightsOn():
@@ -36,6 +41,7 @@ def Flood():
     PumpOff()
 
 
+atexit.register(OnExit)
 # Schedule
 schedule.every().day.at("10:30").do(Flood)
 schedule.every().day.at("7:00").do(LightsOn)
