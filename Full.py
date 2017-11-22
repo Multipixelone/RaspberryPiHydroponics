@@ -8,6 +8,8 @@ import atexit
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(17, GPIO.OUT)
 GPIO.setup(22, GPIO.OUT)
+GPIO.output(17, 0)
+GPIO.output(22, 0)
 print("Welcome to RaspberryPiHydroponics By Multipixelone.")
 print("Starting schedule...")
 
@@ -41,7 +43,7 @@ def Flood():
     PumpOff()
 
 
-atexit.register(OnExit)
+atexit.register(OnExit)  # Added GPIO Cleanup to Script Exit
 # Schedule
 schedule.every().day.at("10:30").do(Flood)
 schedule.every().day.at("7:00").do(LightsOn)
