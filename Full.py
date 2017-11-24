@@ -26,7 +26,7 @@ def LightsOn():
 
 def LightsOff():
     GPIO.output(17, 0)
-
+    print("Lights Off")
 
 def PumpOn():
     GPIO.output(22, 1)
@@ -39,6 +39,7 @@ def PumpOff():
 
 
 def Flood():
+    print("Flooding")
     PumpOn()
     sleep(174)  # Stopwatch the tray, set the correct time to flood ;)
     PumpOff()
