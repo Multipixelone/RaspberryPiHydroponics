@@ -54,7 +54,7 @@ atexit.register(OnExit)  # Added GPIO Cleanup to Script Exit
 # Schedule
 schedule.every().day.at("10:30").do(run_threaded, Flood)
 schedule.every().day.at("7:00").do(run_threaded, LightsOn)
-schedule.every().day.at("13:30").do(run_threaded, LightsOff)
+schedule.every().day.at("19:30").do(run_threaded, LightsOff)
 
 while True:
     schedule.run_pending()
